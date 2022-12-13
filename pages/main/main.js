@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
+        effect: "fade",
         autoplay: {
           delay: 3500,
           disableOnInteraction: false

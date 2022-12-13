@@ -1,0 +1,145 @@
+body {
+    background-color: #B7BC9A;
+}
+header {
+    .form-control:focus {
+        box-shadow: none;
+    }
+    .nav {
+        justify-content: space-between;
+        margin-bottom: 1%;
+        .nav__item {
+            margin: 15px auto;
+            display: flex;
+        }
+        .nav-item {
+            &__city {
+                display: none;
+                &::before {
+                    height: 21px;
+                    width: 21px;
+                    margin-right: 5px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url(../icons/location.svg);
+                    content: '';
+                }
+            }
+            &__links {
+                display: flex;
+                gap: 15px;
+            }
+            &__social-link {
+                height: 21px;
+                width: 21px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                &.user {
+                    background-image: url(../icons/user.svg);
+                }
+                &.bag {
+                    background-image: url(../icons/bag.svg);
+                }
+                &.like {
+                    background-image: url(../icons/like.svg);
+                }
+                &s {
+                    justify-content: flex-end;
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+            &__contact-us {
+                color: #000;
+                text-decoration: none;
+                padding: 15px 0;
+                &::before {
+                    content: '\f0e0';
+                    margin-right: 5px;
+                }
+            }
+            &__search-box { 
+                .form-control {
+                    border: 1px solid #000;
+                }
+                .btn-check:focus+.btn, .btn:focus {
+                    color: #000;
+                    box-shadow: none;
+                    outline: none;
+                }
+                .btn {
+                    color: #000;
+                    border-color: transparent;
+                    &:hover {
+                        color: #000;
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                }
+                .ms-n5 {
+                    margin-left: -40px;
+                    border-top-left-radius: 0px !important;
+                    border-bottom-left-radius: 0px !important;
+                    border-left: 1px solid #000;
+                }
+                input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+                input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+                input::-webkit-search-decoration,
+                input::-webkit-search-cancel-button,
+                input::-webkit-search-results-button,
+                input::-webkit-search-results-decoration { display: none; }
+            }
+        }
+    } 
+}
+footer {
+    .short-links {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .info-link,
+        .customers-link,
+        .contacts-link {
+            text-decoration: none;
+            color: black;
+            display: flex;
+        }
+        .social-links {
+            list-style: none;
+            display: flex;
+            gap: 17px;
+            font-size: 24px;
+            padding: inherit;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            .zen {
+                background-image: url(../icons/zen.svg);
+                height: 24px;
+                width: 24px;
+                margin-top: 7px;
+            }
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        .copyright-text {
+            &::before {
+                content: "\00A9";
+                font-size: 16px;
+            }
+        }
+        .copyright-buttons {
+            display: flex;
+            gap: 15px;
+            .copyright-button {
+                display: flex;
+                vertical-align: middle;
+                min-width: 77px;
+                background-color: #8D8686;
+            }
+        }
+    }
+}
