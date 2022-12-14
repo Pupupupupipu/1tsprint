@@ -3,6 +3,11 @@ body {
   background-color: #B7BC9A;
 }
 
+a {
+  text-decoration: none;
+  font-family: Raleway;
+}
+
 header .form-control:focus {
   box-shadow: none;
 }
@@ -97,6 +102,21 @@ header .nav .nav-item__search-box input::-webkit-search-cancel-button,
 header .nav .nav-item__search-box input::-webkit-search-results-button,
 header .nav .nav-item__search-box input::-webkit-search-results-decoration {
   display: none;
+}
+
+.white-block {
+  display: flex;
+  margin: 0 auto 50px;
+  border-radius: 20px;
+  max-width: 1380px;
+  background-color: #f6f6f6;
+}
+.white-block .breadcrumbs a {
+  color: #000;
+}
+.white-block .breadcrumbs a.disabled {
+  color: gray;
+  pointer-events: none;
 }
 
 footer .short-links {

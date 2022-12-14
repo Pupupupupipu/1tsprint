@@ -1,0 +1,78 @@
+.user-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5em;
+  gap: 30px;
+}
+.user-menu {
+  margin: 2em 0;
+  flex: 0 0;
+}
+.user-data {
+  display: flex;
+  gap: 15px;
+}
+.user-photo {
+  position: relative;
+  border-radius: 20px;
+}
+.user-photo::after {
+  content: "";
+  background-image: url("../../../../icons/check-circle.svg");
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  right: -7px;
+  bottom: -1px;
+}
+.user-fio {
+  display: flex;
+  align-items: center;
+}
+.user-navigate .navigate-link {
+  margin-top: 1em;
+  display: flex;
+  font-size: 1em;
+  white-space: nowrap;
+  color: black;
+}
+.user-content {
+  flex: 1 1;
+  margin: 0 5em;
+}
+.user-content .content-title {
+  text-align: right;
+  margin: 1.5em 0;
+}
+.user-content .content-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.user-content .content-list .product-item {
+  text-align: center;
+}
+.user-content .content-list .product-name {
+  margin: 5px 0;
+}
+.user-content .content-list .product-footer {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+.user-content .content-list .product-edit {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../../icons/edit.svg");
+  background-size: contain;
+  border: none;
+}
+.user-content .content-list .product-delete {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../../icons/delete.svg");
+  background-size: contain;
+  border: none;
+}/*# sourceMappingURL=products.css.map */
