@@ -1,0 +1,19 @@
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.chart {
+  width: 100%;
+}
+.chart-datepicker {
+  border: none;
+  background-color: #B7BC9A;
+  padding: 4px 10px;
+  text-align: center;
+}
+.chart-period {
+  margin: 2em 0;
+  font-size: 17px;
+}/*# sourceMappingURL=sales.css.map */
