@@ -1,11 +1,14 @@
 @charset "UTF-8";
+* {
+  font-family: Raleway;
+}
+
 body {
   background-color: #B7BC9A;
 }
 
 a {
   text-decoration: none;
-  font-family: Raleway;
 }
 
 header .form-control:focus {
