@@ -1,1 +1,28 @@
 @import url(../../../profile/profile.css);
+.content-form {
+    display: flex;
+    form {
+        display: flex;
+        flex-direction: column;
+        input {
+            background-color: transparent;
+            &[type="text"] {
+                border: none;
+                border-bottom: 1px solid #000;
+                background-color: transparent;
+                padding: 5px 0;
+            }
+        }
+        label {
+            margin: 1em 0;
+        }
+    }
+    textarea {
+        // line-height: 4ch;
+        // background-image: linear-gradient(transparent, transparent calc(4ch - 1px), #000 0px);
+        // background-size: 100% 4ch;
+        // font-size: 16px;
+        background-color: transparent;
+        margin: 10px 0;
+    }
+}

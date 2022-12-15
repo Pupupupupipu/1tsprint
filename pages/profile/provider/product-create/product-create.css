@@ -1,1 +1,24 @@
-@import url(../../../profile/profile.css);/*# sourceMappingURL=product-create.css.map */
+@import url(../../../profile/profile.css);
+.content-form {
+  display: flex;
+}
+.content-form form {
+  display: flex;
+  flex-direction: column;
+}
+.content-form form input {
+  background-color: transparent;
+}
+.content-form form input[type=text] {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 0;
+}
+.content-form form label {
+  margin: 1em 0;
+}
+.content-form textarea {
+  background-color: transparent;
+  margin: 10px 0;
+}/*# sourceMappingURL=product-create.css.map */

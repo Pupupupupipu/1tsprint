@@ -88,12 +88,15 @@
                         <div class="content-form">
                             <form action="" method="post">
                                 <input type="text" placeholder="Название товара"/>
-                                <textarea name="" id="" cols="" rows="2" spellcheck="true" placeholder="Краткое описание товара"></textarea>
+                                <textarea name="" id="" cols="" rows="2" spellcheck="true" 
+                                placeholder="Краткое описание товара"></textarea>
                                 <textarea name="" id="" cols="" rows="6" placeholder="Подробное описание товара"></textarea>
                                 <label for="count">Количество товара на складе:<input id="count" type="number">шт.</label>
                                 <label for="price">Стоимость товара:<input id="price" type="number">р.</label>
-                                <label for="photo"><input id="photo" type="file" class="form-control-file" id="exampleFormControlFile1"></label>
-                                <label for="video"><input id="video" type="file" class="form-control-file" id="exampleFormControlFile1"></label>
+                                <label for="photo">Фото товара:<input id="photo" accept="image/*" multiple 
+                                    type="file" class="form-control-file" id="exampleFormControlFile1"></label>
+                                <label for="video">Видео товара:<input id="video" accept="video/*" multiple
+                                    type="file" class="form-control-file" id="exampleFormControlFile1"></label>
                                 <button type="submit">Создать новый товар</button>
                             </form>
                         </div>
