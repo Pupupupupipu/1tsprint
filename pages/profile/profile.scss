@@ -51,38 +51,5 @@
             text-align: right;
             margin: 1.5em 0;
         }
-        .content-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            .product {
-                &-item {
-                    text-align: center;
-                }
-                &-name {
-                    margin: 5px 0;
-                }
-                &-footer {
-                    display: flex;
-                    margin-top: 15px;
-                    justify-content: space-between;
-                }
-                &-edit {
-                    width: 24px;
-                    height: 24px;
-                    background-image: url('../../../../icons/edit.svg');
-                    background-size: contain;
-                    border: none;
-                }
-                &-delete {
-                    width: 24px;
-                    height: 24px;
-                    background-image: url('../../../../icons/delete.svg');
-                    background-size: contain;
-                    border: none;
-                }
-            }
-        }
     }
 }

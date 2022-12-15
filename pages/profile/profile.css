@@ -48,35 +48,4 @@
 .user-content .content-title {
   text-align: right;
   margin: 1.5em 0;
-}
-.user-content .content-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-.user-content .content-list .product-item {
-  text-align: center;
-}
-.user-content .content-list .product-name {
-  margin: 5px 0;
-}
-.user-content .content-list .product-footer {
-  display: flex;
-  margin-top: 15px;
-  justify-content: space-between;
-}
-.user-content .content-list .product-edit {
-  width: 24px;
-  height: 24px;
-  background-image: url("../../../../icons/edit.svg");
-  background-size: contain;
-  border: none;
-}
-.user-content .content-list .product-delete {
-  width: 24px;
-  height: 24px;
-  background-image: url("../../../../icons/delete.svg");
-  background-size: contain;
-  border: none;
 }/*# sourceMappingURL=profile.css.map */

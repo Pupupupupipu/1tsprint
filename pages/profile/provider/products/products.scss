@@ -1,84 +1,52 @@
-.user {
-    &-wrapper {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 5em;
-        gap: 30px;
-    }
-    &-menu {
-        margin: 2em 0;
-        flex: 0 0;
-    }
-    &-data {
-        display: flex;
-        gap: 15px;
-    }
-    &-photo {
-        position: relative;
-        border-radius: 20px;
-        &::after {
-            content: '';
-            background-image: url('../../../../icons/check-circle.svg');
+@import url(../../profile.css);
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    .product {
+        &-item {
+            text-align: center;
+        }
+        &-image {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "HIT";
+                width: 60px;
+                height: 30px;
+                border-radius: 20px;
+                background-color: #E3E9C2;
+                display: flex;
+                top: 10px;
+                left: 10px;
+                justify-content: center;
+                align-items: center;
+                font-family: Raleway;
+                font-size: 15px;
+            }
+        }
+        &-name {
+            margin: 5px 0;
+        }
+        &-footer {
+            display: flex;
+            margin-top: 15px;
+            justify-content: space-between;
+        }
+        &-edit {
             width: 24px;
             height: 24px;
-            display: flex;
-            position: absolute;
-            right: -7px;
-            bottom: -1px;
+            background-image: url('../../../../icons/edit.svg');
+            background-size: contain;
+            border: none;
         }
-    }
-    &-fio {
-        display: flex;
-        align-items: center;
-    }
-    &-navigate {
-        .navigate-link {
-            margin-top: 1em;
-            display: flex;
-            font-size: 1em;
-            white-space: nowrap;
-            color: black;
-        }
-    }
-    &-content {
-        flex: 1 1;
-        margin: 0 5em;
-        .content-title {
-            text-align: right;
-            margin: 1.5em 0;
-        }
-        .content-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            .product {
-                &-item {
-                    text-align: center;
-                }
-                &-name {
-                    margin: 5px 0;
-                }
-                &-footer {
-                    display: flex;
-                    margin-top: 15px;
-                    justify-content: space-between;
-                }
-                &-edit {
-                    width: 24px;
-                    height: 24px;
-                    background-image: url('../../../../icons/edit.svg');
-                    background-size: contain;
-                    border: none;
-                }
-                &-delete {
-                    width: 24px;
-                    height: 24px;
-                    background-image: url('../../../../icons/delete.svg');
-                    background-size: contain;
-                    border: none;
-                }
-            }
+        &-delete {
+            width: 24px;
+            height: 24px;
+            background-image: url('../../../../icons/delete.svg');
+            background-size: contain;
+            border: none;
         }
     }
 }
