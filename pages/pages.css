@@ -42,6 +42,9 @@ header .nav .nav-item__city::before {
   background-image: url(../icons/location.svg);
   content: "";
 }
+header .nav .nav-item__link {
+  color: #000;
+}
 header .nav .nav-item__links {
   display: flex;
   gap: 15px;

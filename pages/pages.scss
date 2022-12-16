@@ -37,6 +37,9 @@ header {
                     content: '';
                 }
             }
+            &__link {
+                color: #000;
+            }
             &__links {
                 display: flex;
                 gap: 15px;
