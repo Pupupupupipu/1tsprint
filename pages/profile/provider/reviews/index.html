@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./reviews.css">
+    <link rel="stylesheet" href="../../../pages.css">
+    <script defer src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+    <script defer src="https://kit.fontawesome.com/255ecd79c2.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="./reviews.js"></script>
+    <script defer src="../../../pages.js"></script>
+    <title>AnonGifts - Личный кабинет - Избранное</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__block">
+                    <a href="/pages/main/main.html" class="nav__item nav-item__logo">логотип</a>
+                    <div class="nav__item nav-item__city"></div>
+                </div>
+                <div class="nav__block">
+                    <div class="nav__item nav-item__links">
+                        <a href="/catalog" class="nav-item__link">Каталог</a>
+                        <a href="/terms" class="nav-item__link">Условия</a>
+                        <a href="/stock" class="nav-item__link">Акции</a>
+                        <a href="/company" class="nav-item__link">О компании</a>
+                    </div>
+                    <div class="nav__item nav-item__search-box">
+                        <div class="input-group">
+                            <input class="form-control bg-transparent rounded-pill" type="search" id="example-search-input" placeholder="Поиск">
+                            <span class="input-group-append">
+                                <button class="btn bg-transparent rounded-pill ms-n5" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__block">
+                    <div class="nav__item nav-item__social-links">
+                        <a href="/" class="nav-item__social-link bag"></a>
+                        <a href="/" class="nav-item__social-link user"></a>
+                        <a href="/" class="nav-item__social-link like"></a>
+                    </div>
+                    <div class="nav__item nav-item__contact">
+                        <a href="" class="nav-item__contact-us fa-regular">Связаться с нами</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="white-block">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="/pages/main/">главная</a>
+                    >
+                    <a href="" class="disabled">заказы</a>
+                </div>
+                <div class="user-wrapper">
+                    <div class="user-menu">
+                        <div class="user-data">
+                            <div class="user-photo"><img src="../../../../icons/user.png" loading="lazy" alt="User photo"/></div>
+                            <div class="user-fio">
+                                Максим 
+                                Крылов
+                            </div>
+                        </div>
+                        <nav class="user-navigate">
+                            <a href="/pages/profile/provider/info/" class="navigate-link">Личная информация</a>
+                            <a href="/pages/profile/provider/products/" class="navigate-link">Мои товары</a>
+                            <a href="/pages/profile/provider/sales/" class="navigate-link">Мои продажи</a>
+                            <a href="/pages/profile/provider/product-create/" class="navigate-link">Создать товар</a>
+                            <a href="/pages/profile/provider/get-cash/" class="navigate-link">Вывод средств</a>
+                            <a href="/pages/profile/provider/reviews/" class="navigate-link active">Отзывы</a>
+                            <a href="/pages/profile/provider/messages/" class="navigate-link">Сообщения</a>
+                            <a href="/pages/profile/provider/logOut/" class="navigate-link">Выйти</a>
+                        </nav>
+                    </div>
+                    <div class="user-content">
+                        <h2 class="content-title">Отзывы</h2>
+                        <div class="content-blocks">
+                            <div class="content-lines">
+                                <div class="content-line">
+                                    <div class="line-header">
+                                        <div class="line-time">01.01.2022.</div>
+                                        <a class="reply-link">Ответить</a>
+                                    </div>
+                                    <div class="content-wrapper"></div>
+                                    <div class="content-left">
+                                        <img class="product-image" src="../../../../icons/review-product.png" />
+                                        <div class="product-name">Lorem, ipsum.</div>
+                                    </div>
+                                    <div class="content-right">
+                                        <div class="user-short">
+                                            <img src="../../../../icons/user-pic.png" alt="User face" class="user-pic">
+                                            <div class="user-name">Анна</div>
+                                        </div>
+                                        <p class="user-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Natus quis sunt quod autem. Modi ducimus aliquid soluta aut officia beatae 
+                                            tempore consequatur dicta vero magnam nobis animi, hic magni explicabo!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="short-links">
+                <div class="short-list logo"><a href="/">Логотип</a></div>
+                <div class="short-list customers">
+                    <h5 class="castomer-title">Покупателям</h3>
+                    <a href="/" class="customers-link">Каталог</a>
+                    <a href="/" class="customers-link">Условия</a>
+                    <a href="/" class="customers-link">Акции</a>
+                    <a href="/" class="customers-link">О компании</a>
+                </div>
+                <div class="short-list info">
+                    <h5 class="info-title">Информация</h3>
+                    <a href="/" class="info-link">Наши отзывы</a>
+                    <a href="/" class="info-link">Сотрудничество</a>
+                    <a href="/" class="info-link">Пользовательское соглашение</a>
+                    <a href="/" class="info-link">Политика конфиденциальности</a>
+                </div>
+                <div class="short-list contacts">
+                    <h5 class="contacts-title">Контакты</h3>
+                    <a href="" class="contacts-link">Номер телефона</a>
+                    <a href="" class="contacts-link">Почта</a>
+                    <ul class="social-links">
+                        <li class="social-link"><a href='/' class="fa-brands fa-vk"></a></li>
+                        <li class="social-link"><a href='/' class="fa-brands fa-telegram"></a></li>
+                        <li class="social-link"><a href='/' class="fa-brands zen"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright py-5">
+                <div class="copyright-text">
+                    All rights reserved
+                </div>
+                <div class="copyright-buttons">
+                    <button class="copyright-button"></button>
+                    <button class="copyright-button"></button>
+                    <button class="copyright-button"></button>
+                    <button class="copyright-button"></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

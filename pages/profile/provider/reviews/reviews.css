@@ -1,0 +1,13 @@
+@import url(../../profile.css);
+.content-line {
+  border-top: 1px solid #000;
+}
+.content-line:last-of-type {
+  border-bottom: 1px solid #000;
+}
+
+.line-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}/*# sourceMappingURL=reviews.css.map */
