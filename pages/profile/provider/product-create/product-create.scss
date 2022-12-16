@@ -1,0 +1,56 @@
+@import url(../../../profile/profile.css);
+.content-form {
+    display: flex;
+    form {
+        display: flex;
+        flex-direction: column;
+        input {
+            background-color: transparent;
+            &[type="text"] {
+                border: none;
+                border-bottom: 1px solid #000;
+                background-color: transparent;
+                padding: 5px 0;
+            }
+            &[type="number"] {
+                max-width: 90px;
+                max-height: 20px;
+            }
+        }
+        label {
+            margin: 1em 0;
+            &.upload-place {
+                display: flex;
+                justify-content: space-between;
+                .upload-btn {
+                    background-color: transparent;
+                    padding: 1% 10%;
+                    border-radius: 20px;
+                    border: 1px solid #bb343f;
+                }
+            }
+        }
+        .image-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            .img {
+                width: 15%;
+                min-height: 50px;
+                background-color: #D9D9D9;
+                border-radius: 10px;
+            }
+        }
+        .submit-btn {
+            padding: 1% 10%;
+            margin-top: 2em;
+            border-radius: 20px;
+            color: #fff;
+            background-color: #bb343f;
+        }
+    }
+    textarea {
+        background-color: transparent;
+        margin: 10px 0;
+    }
+}

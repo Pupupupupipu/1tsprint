@@ -1,0 +1,56 @@
+@import url(../../../profile/profile.css);
+.content-form {
+  display: flex;
+}
+.content-form form {
+  display: flex;
+  flex-direction: column;
+}
+.content-form form input {
+  background-color: transparent;
+}
+.content-form form input[type=text] {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 0;
+}
+.content-form form input[type=number] {
+  max-width: 90px;
+  max-height: 20px;
+}
+.content-form form label {
+  margin: 1em 0;
+}
+.content-form form label.upload-place {
+  display: flex;
+  justify-content: space-between;
+}
+.content-form form label.upload-place .upload-btn {
+  background-color: transparent;
+  padding: 1% 10%;
+  border-radius: 20px;
+  border: 1px solid #bb343f;
+}
+.content-form form .image-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.content-form form .image-box .img {
+  width: 15%;
+  min-height: 50px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+}
+.content-form form .submit-btn {
+  padding: 1% 10%;
+  margin-top: 2em;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #bb343f;
+}
+.content-form textarea {
+  background-color: transparent;
+  margin: 10px 0;
+}/*# sourceMappingURL=product-create.css.map */
