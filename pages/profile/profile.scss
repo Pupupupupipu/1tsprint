@@ -53,3 +53,78 @@
         }
     }
 }
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    .product {
+        &-item {
+            text-align: center;
+        }
+        &-image {
+            position: relative;
+            font-family: 'Font Awesome 6 Free';
+            &::before {
+                position: absolute;
+                content: "HIT";
+                width: 60px;
+                height: 30px;
+                border-radius: 20px;
+                background-color: #E3E9C2;
+                display: flex;
+                top: 10px;
+                left: 10px;
+                justify-content: center;
+                align-items: center;
+                font-family: Raleway;
+                font-size: 15px;
+            }
+            &.favorites {
+                &::after {
+                    display: flex;
+                    position: absolute;
+                    content: "\f004";
+                    font-weight: 900;
+                    color: red;
+                    top: 10px;
+                    right: 15px;
+                    font-size: 20px;
+
+                }
+            }
+        }
+        &-name {
+            margin: 5px 0;
+        }
+        &-footer {
+            display: flex;
+            margin-top: 15px;
+            justify-content: space-between;
+        }
+        &-edit {
+            width: 24px;
+            height: 24px;
+            background-image: url('../../../../icons/edit.svg');
+            background-size: contain;
+            border: none;
+        }
+        &-delete {
+            width: 24px;
+            height: 24px;
+            background-image: url('../../../../icons/delete.svg');
+            background-size: contain;
+            border: none;
+        }
+        &-buy {
+            display: flex;
+            flex: 1 1;
+            justify-content: center;
+            padding: 5px 0;
+            background-color: #bb343f;
+            border-radius: 10px;
+            border: none;
+            color: white;
+        }
+    }
+}
