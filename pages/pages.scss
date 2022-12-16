@@ -10,6 +10,9 @@ body {
 a {
     text-decoration: none;
 }
+.hide {
+    display: none;
+}
 header {
     .form-control:focus {
         box-shadow: none;

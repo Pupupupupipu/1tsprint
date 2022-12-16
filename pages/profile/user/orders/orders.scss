@@ -1,0 +1,38 @@
+@import url(../../profile.css);
+.search-orders {
+    border: 1px solid #BB342F;
+    border-radius: 20px;
+    padding: 1% 2%;
+    margin-bottom: 3%;
+    background-color: transparent;
+    &:focus-visible {
+        outline: #BB342F auto 1px;
+    }
+}
+.order {
+    &-item {
+        border-top: 1px solid #000;
+        &+.order-item {
+            border-bottom: 1px solid #000;
+        }
+    }
+    &-header { 
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    &-time {
+        flex: 1 1;
+    }
+    &-count {
+        flex: 0 0;
+        white-space: nowrap;
+    }
+    &-number {
+        margin-top: 1em;
+    }
+    &-products {
+        list-style: none;
+        padding: 0;
+    }
+}
