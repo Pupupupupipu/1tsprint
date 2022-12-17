@@ -84,17 +84,17 @@
                         </nav>
                     </div>
                     <div class="user-content">
-                        <h2 class="content-title text-start">Создать товар</h2>
                         <div class="content-form">
+                            <h2 class="content-title text-start">Создать товар</h2>
                             <form action="" method="post">
                                 <input type="text" placeholder="Название товара"/>
-                                <textarea name="" id="" cols="" rows="2" spellcheck="true" 
+                                <textarea name="short-desc" id="short-desc" cols="" rows="2" spellcheck="true" 
                                 placeholder="Краткое описание товара"></textarea>
-                                <textarea name="" id="" cols="" rows="6" placeholder="Подробное описание товара"></textarea>
-                                <label for="count">Количество товара на складе:<input id="count" type="number">шт.</label>
-                                <label for="price">Стоимость товара:<input id="price" type="number">р.</label>
-                                <label class="upload-place" for="photo">Фото товара:<input id="photo" accept="image/*" multiple 
-                                    type="file" class="form-control-file d-none" id="exampleFormControlFile1">
+                                <textarea name="full-desc" id="full-desc" cols="" rows="6" placeholder="Подробное описание товара"></textarea>
+                                <label for="count">Количество товара на складе:<input id="count" name="count" type="number">шт.</label>
+                                <label for="price">Стоимость товара:<input id="price" name="price" type="number">р.</label>
+                                <label class="upload-place" for="photo">Фото товара:<input id="photo" name="photo" accept="image/*" multiple 
+                                    type="file" class="form-control-file d-none" id="photo">
                                     <button class="img-upload upload-btn" type="button">Загрузить</button></label>
                                 <div class="image-box">
                                     <div class="img"></div>
@@ -108,8 +108,8 @@
                                     <div class="img"></div>
                                     <div class="img"></div>
                                 </div>
-                                <label class="upload-place" for="video">Видео товара:<input id="video" accept="video/*" multiple
-                                    type="file" class="form-control-file d-none" id="exampleFormControlFile1">
+                                <label class="upload-place" for="video">Видео товара:<input name="video" id="video" accept="video/*" multiple
+                                    type="file" class="form-control-file d-none" id="video">
                                     <button class="video-upload upload-btn" type="button">Загрузить</button></label>
                                 <div class="video-box"><img src="../../../../icons/video.png" /></div>
                                 <button class="submit-btn" type="submit">Создать новый товар</button>

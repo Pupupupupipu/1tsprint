@@ -1,7 +1,9 @@
 @import url(../../../profile/profile.css);
-.content-form {
-  display: flex;
+.user-content {
+  margin: 1em auto;
+  flex: 0;
 }
+
 .content-form form {
   display: flex;
   flex-direction: column;

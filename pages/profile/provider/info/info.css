@@ -1,51 +1,48 @@
-input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-calendar-picker-indicator {
+.user-wrapper input[type=date]::-webkit-inner-spin-button,
+.user-wrapper input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
-
-.chart {
+.user-wrapper .chart {
   width: 100%;
 }
-.chart-datepicker {
+.user-wrapper .chart-datepicker {
   border: none;
   background-color: #B7BC9A;
   padding: 4px 10px;
   text-align: center;
 }
-.chart-period {
+.user-wrapper .chart-period {
   margin: 2em 0;
   font-size: 16px;
 }
-
-.info-content {
-  margin-top: 30px;
-  margin-left: 190px;
+.user-wrapper .info-content {
+  margin: 1em auto;
 }
-.info .info-title {
-  margin-bottom: 23px;
+.user-wrapper .info-title {
+  margin: 1.5em 0;
 }
-.info-form {
-  width: 465px;
-  margin-top: 23px;
+.user-wrapper .info-form {
+  width: 100em;
+  max-width: 465px;
 }
-.info-form_edit {
+.user-wrapper .info-form_edit {
   display: flex;
   flex-direction: column;
   color: #000;
 }
-.info-form_password-change {
+.user-wrapper .info-form_password-change {
   color: #000;
 }
-.info-form_account-remove {
+.user-wrapper .info-form_account-remove {
   color: #000;
 }
-.info-form_box {
+.user-wrapper .info-form_box {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.info-form_item {
+.user-wrapper .info-form_item {
   position: relative;
   display: flex;
   margin-right: 10px;
@@ -54,13 +51,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 400;
   font-size: 16px;
 }
-.info-form_label {
+.user-wrapper .info-form_label {
   position: absolute;
   top: 0;
   color: #000;
   transition: 0.3s;
 }
-.info-form_input {
+.user-wrapper .info-form_input {
   display: block;
   width: 100%;
   font-family: inherit;
@@ -72,35 +69,35 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
   transition: 0.3s;
 }
-.info-form_upload {
+.user-wrapper .info-form_upload {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 23px;
   margin-bottom: 30px;
 }
-.info-form_text {
+.user-wrapper .info-form_text {
   display: block;
   font-family: Raleway;
   font-weight: 400;
   font-size: 16px;
 }
-.info-form_btn {
+.user-wrapper .info-form_btn {
   display: flex;
   color: #000;
   font-weight: 400;
-  padding: 1% 10%;
+  padding: 1% 0;
   border: 1px solid #bb343f;
   border-radius: 20px;
   transition: 0.2s;
 }
-.info-radio {
+.user-wrapper .info-radio {
   display: flex;
   margin-bottom: 27px;
   gap: 20px;
   justify-content: center;
 }
-.info-passport {
+.user-wrapper .info-passport {
   content: "";
   display: block;
   width: 77px;

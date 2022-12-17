@@ -1,113 +1,114 @@
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
-.chart {
-    width: 100%;
-    &-datepicker {
-        border: none;
-        background-color: #B7BC9A;
-        padding: 4px 10px;
-        text-align: center;
+.user-wrapper {
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
     }
-    &-period {
-        margin: 2em 0;
-        font-size: 16px;
-    }
-}
-.info {
-    &-content {
-        margin-top: 30px;
-        margin-left: 190px;
-    }
-    .info-title {
-        margin-bottom: 23px;
-    }
-    &-form {
-        width: 465px;
-        margin-top: 23px;
-        &_edit {
-            display: flex;
-            flex-direction: column;
-            color: #000;
+    .chart {
+        width: 100%;
+        &-datepicker {
+            border: none;
+            background-color: #B7BC9A;
+            padding: 4px 10px;
+            text-align: center;
         }
-        &_password-change {
-            color: #000;
-        }
-        &_account-remove{
-            color: #000;
-        }
-        &_box {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            
-        }
-        &_item {
-            position: relative;
-            display: flex;
-            margin-right: 10px;
-            margin-bottom: 37px;
-            font-family: Raleway;
-            font-weight: 400;
+        &-period {
+            margin: 2em 0;
             font-size: 16px;
         }
-        &_label {
-            position: absolute; 
-            top: 0;         
-            color: #000;
-            transition: 0.3s;
+    }
+    .info {
+        &-content {
+            margin: 1em auto;
         }
-        &_input{              
-            display: block;
-            width: 100%;        
-            font-family: inherit;        
-            font-weight: 400;
-            color: #212529;        
-            border: none; 
-            border-bottom: 1px solid #000; 
-            background-color: transparent; 
-            outline: none;
-            transition: 0.3s;;
+        &-title {
+            margin: 1.5em 0;
         }
-        &_upload{
+        &-form {
+            width: 100em;
+            max-width: 465px;
+            &_edit {
+                display: flex;
+                flex-direction: column;
+                color: #000;
+            }
+            &_password-change {
+                color: #000;
+            }
+            &_account-remove{
+                color: #000;
+            }
+            &_box {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                
+            }
+            &_item {
+                position: relative;
+                display: flex;
+                margin-right: 10px;
+                margin-bottom: 37px;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 16px;
+            }
+            &_label {
+                position: absolute; 
+                top: 0;         
+                color: #000;
+                transition: 0.3s;
+            }
+            &_input{              
+                display: block;
+                width: 100%;        
+                font-family: inherit;        
+                font-weight: 400;
+                color: #212529;        
+                border: none; 
+                border-bottom: 1px solid #000; 
+                background-color: transparent; 
+                outline: none;
+                transition: 0.3s;;
+            }
+            &_upload{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 23px;
+                margin-bottom: 30px;
+            }
+            &_text {
+                display: block;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 16px;
+            }
+            &_btn {
+                display: flex;
+                color: #000;
+                font-weight: 400;
+                padding: 1% 0;
+                border: 1px solid #bb343f;
+                border-radius: 20px;
+                transition: 0.2s;
+                } 
+        }
+        &-radio {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 23px;
-            margin-bottom: 30px;
+            margin-bottom: 27px;
+            gap: 20px;
+            justify-content: center;
         }
-        &_text {
+        &-passport {
+            content: "";
             display: block;
-            font-family: Raleway;
-            font-weight: 400;
-            font-size: 16px;
-        }
-        &_btn {
-            display: flex;
-            color: #000;
-            font-weight: 400;
-            padding: 1% 10%;
-            border: 1px solid #bb343f;
+            width: 77px;
+            height: 77px;
+            background: #D9D9D9;
             border-radius: 20px;
-            transition: 0.2s;
-            } 
+        }
+    // a.button8:hover { background: rgba(255,255,255,.2); }
+    // a.button8:active { background: white; }
     }
-    &-radio {
-        display: flex;
-        margin-bottom: 27px;
-        gap: 20px;
-        justify-content: center;
-    }
-    &-passport {
-        content: "";
-        display: block;
-        width: 77px;
-        height: 77px;
-        background: #D9D9D9;
-        border-radius: 20px;
-    }
-// a.button8:hover { background: rgba(255,255,255,.2); }
-// a.button8:active { background: white; }
 }
