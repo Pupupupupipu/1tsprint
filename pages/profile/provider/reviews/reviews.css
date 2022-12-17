@@ -1,13 +1,39 @@
 @import url(../../profile.css);
 .content-line {
   border-top: 1px solid #000;
+  padding-bottom: 1em;
 }
 .content-line:last-of-type {
   border-bottom: 1px solid #000;
+}
+.content-wrapper {
+  display: flex;
+  gap: 15px;
+}
+.content-left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.content-left .product-name {
+  margin-top: 0.5em;
 }
 
 .line-header {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0;
   gap: 15px;
+}
+.line-header .reply-link {
+  color: #000;
+}
+
+.user-short {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.user-review {
+  margin: 1em 0;
 }/*# sourceMappingURL=reviews.css.map */

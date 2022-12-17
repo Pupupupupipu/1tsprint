@@ -1,9 +1,22 @@
 @import url(../../profile.css);
-.content{
+.content {
     &-line {
         border-top: 1px solid #000;
+        padding-bottom: 1em;
         &:last-of-type {
             border-bottom: 1px solid #000;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        gap: 15px;
+    }
+    &-left {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .product-name {
+            margin-top: .5em;
         }
     }
 }
@@ -11,9 +24,20 @@
     &-header { 
         display: flex;
         justify-content: space-between;
+        margin: 10px 0;
         gap: 15px;
+        .reply-link {
+            color: #000;
+        }
     }
-    &-time {
-        
+}
+.user {
+    &-short {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    &-review {
+        margin: 1em 0;
     }
 }
