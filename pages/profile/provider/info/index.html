@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./sales.css">
     <link rel="stylesheet" href="./info.css">
-    <link rel="stylesheet" href="../../profile.css">
     <link rel="stylesheet" href="../../../pages.css">
     <script defer src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
     <script defer src="https://kit.fontawesome.com/255ecd79c2.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script defer src="./sales.js"></script>
-    <script defer src="../../../pages.js"></script>
+    <script defer src="./info.js"></script>
+    <script defer type="module" src="../../../pages.js"></script>
     <title>AnonGifts - Личный кабинет</title>
 </head>
 <body>
@@ -23,7 +21,7 @@
         <div class="container">
             <nav class="nav">
                 <div class="nav__block">
-                    <a href="/pages/main/main.html" class="nav__item nav-item__logo">логотип</a>
+                    <a href="/" class="nav__item nav-item__logo">логотип</a>
                     <div class="nav__item nav-item__city"></div>
                 </div>
                 <div class="nav__block">
@@ -61,7 +59,7 @@
         <div class="white-block">
             <div class="container">
                 <div class="breadcrumbs">
-                    <a href="/pages/main/">главная</a>
+                    <a href="/">главная</a>
                     >
                     <a href="" class="disabled">личная информация</a>
                 </div>
@@ -82,7 +80,7 @@
                             <a href="/pages/profile/provider/get-cash/" class="navigate-link">Вывод средств</a>
                             <a href="/pages/profile/provider/reviews/" class="navigate-link">Отзывы</a>
                             <a href="/pages/profile/provider/messages/" class="navigate-link">Сообщения</a>
-                            <a href="/pages/profile/provider/logOut/" class="navigate-link">Выйти</a>
+                            <a href="#logout" class="navigate-link">Выйти</a>
                         </nav>
                     </div>
                     <div class="info-content">
@@ -91,30 +89,27 @@
                         <form class="info-form">
                             <ul class="info-form_box">
                                 <li class="info-form_item">
-                                  <label class="info-form_label" for="name">Имя</label>
-                                  <input class="info-form_input" type="text" name="name" id="name" required>
+                                  <input class="info-form_input" placeholder="Имя" type="text" name="name" id="name" required>
                                 </li>
                                 <li class="info-form_item">
-                                    <label class="info-form_label" for="lastname">Отчество</label>
-                                    <input class="info-form_input" type="text" name="lastname" id="lastname" required>
+                                    <input class="info-form_input" placeholder="Фамилия" type="text" name="lastname" id="lastname" required>
                                 </li>
                                 <li class="info-form_item">
-                                    <label class="info-form_label" for="family">Фамилия</label>
-                                    <input class="info-form_input" type="text" name="family" id="family" required>
+                                    <input class="info-form_input" placeholder="Отчество" type="text" name="surname" id="surname" required>
                                 </li>
                             </ul>
 
-                            <div class="info-radio">
-                                <div class="form_radio">
-                                    <input id="man" type="radio" name="radio" value="1" checked>
+                            <div class="info-gender">
+                                <div class="info-form_gender">
+                                    <input id="man" type="radio" name="gender" value="man" checked>
                                     <label for="man">Мужской</label>
                                 </div>                                    
-                                <div class="info-form_radio">
-                                    <input id="woman" type="radio" name="radio" value="2">
+                                <div class="info-form_gender">
+                                    <input id="woman" type="radio" name="gender" value="woman">
                                     <label for="woman">Женский</label>
                                 </div>                                    
-                                <div class="info-form_radio">
-                                    <input id="undefined" type="radio" name="radio" value="3">
+                                <div class="info-form_gender">
+                                    <input id="undefined" type="radio" name="gender" value="undefined">
                                     <label for="undefined">Не указан</label>
                                 </div>
                             </div>
@@ -122,28 +117,23 @@
                                                          
                             <ul class="info-form_box">
                                     <li class="info-form_item">
-                                        <label class="info-form_label" for="date">Дата рождения</label>
-                                        <input class="info-form_input" type="text" name="date" required="required">
+                                        <input class="info-form_input" placeholder="Дата рождения" type="date" name="birthdate" required="required">
                                       </li>
                                     <li class="info-form_item">
-                                        <label class="info-form_label" for="email">почта</label>
-                                      <input class="info-form_input" type="email" name="email" required="required">
+                                      <input class="info-form_input" placeholder="Почта" type="email" name="email" required="required">
                                     </li>
                                     <li class="info-form_item">
-                                        <label class="info-form_label"l for="phone">телефон</label>
-                                        <input class="info-form_input" type="tel" name="phone" id="phone" >
+                                        <input class="info-form_input" placeholder="Телефон" pattern="/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/" 
+                                        type="tel" name="phone" id="phone" >
                                     </li>
                                     <li class="info-form_item">
-                                        <label class="info-form_label" for="city">город</label>
-                                        <input class="info-form_input" type="text" name="city" id="city" required>
+                                        <input class="info-form_input" placeholder="Город" type="text" name="city" id="city" required>
                                     </li>                                    
                                     <li class="info-form_item">
-                                        <label class="info-form_label" for="adress">Адрес проживания</label>
-                                        <input class="info-form_input" type="text" name="adress" id="adress" required>
+                                        <input class="info-form_input" placeholder="Адрес проживания" type="text" name="address" id="address" required>
                                     </li>
                                     <li class="info-form_item">
-                                        <label class="info-form_label" for="pasport">Серия и номер паспорта</label>
-                                        <input class="info-form_input" type="text" name="pasport" id="pasport" required>
+                                        <input class="info-form_input" placeholder="Серия и номер паспорта" type="number" name="passport" id="passport" required>
                                     </li>   
                                     <li class="info-form_item">
                                         <p class="info-form_label">Приложить фото паспорта</p>

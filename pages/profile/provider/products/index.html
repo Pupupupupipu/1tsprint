@@ -12,8 +12,7 @@
     <script defer src="https://kit.fontawesome.com/255ecd79c2.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script defer src="./products.js"></script>
-    <script defer src="../../../pages.js"></script>
+    <script defer type="module" src="./products.js"></script>
     <title>AnonGifts - Личный кабинет</title>
 </head>
 <body>
@@ -21,7 +20,7 @@
         <div class="container">
             <nav class="nav">
                 <div class="nav__block">
-                    <a href="/pages/main/main.html" class="nav__item nav-item__logo">логотип</a>
+                    <a href="/" class="nav__item nav-item__logo">логотип</a>
                     <div class="nav__item nav-item__city"></div>
                 </div>
                 <div class="nav__block">
@@ -59,7 +58,7 @@
         <div class="white-block">
             <div class="container">
                 <div class="breadcrumbs">
-                    <a href="/pages/main/">главная</a>
+                    <a href="/">главная</a>
                     >
                     <a href="" class="disabled">мои товары</a>
                 </div>
@@ -80,13 +79,13 @@
                             <a href="/pages/profile/provider/get-cash/" class="navigate-link">Вывод средств</a>
                             <a href="/pages/profile/provider/reviews/" class="navigate-link">Отзывы</a>
                             <a href="/pages/profile/provider/messages/" class="navigate-link">Сообщения</a>
-                            <a href="/pages/profile/provider/logOut/" class="navigate-link">Выйти</a>
+                            <a href="#logout" class="navigate-link">Выйти</a>
                         </nav>
                     </div>
                     <div class="user-content">
                         <h2 class="content-title">Мои товары</h2>
                         <div class="content-list">
-                            <div class='product-item'>
+                            <!-- <div class='product-item'>
                                 <div class='product-image'><img src="../../../../icons/product.svg"/></div>
                                 <div class="product-name">Туалетная вода VERSACE</div>
                                 <div class="product-price">8 700 р.</div>
@@ -157,7 +156,7 @@
                                         <button class="product-delete"></button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

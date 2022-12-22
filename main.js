@@ -1,3 +1,5 @@
+import './pages/pages.js'
+
 window.addEventListener("load", () => {
     const mainSwiper = new Swiper(".main-swiper", {
         slidesPerView: 1,
@@ -29,3 +31,4 @@ window.addEventListener("load", () => {
         }
     });
 });
+
