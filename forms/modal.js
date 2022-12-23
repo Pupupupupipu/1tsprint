@@ -7,8 +7,10 @@ const userIcon = document.querySelector('.user')
 const modal = document.querySelector('.modal')
 const close = document.querySelector('.close')
 const cancelbtn = document.querySelector('.cancelbtn')
-const form = document.querySelector('.modal-content')
+const signUpForm = document.querySelector('.modal-content')
 const signInForm = document.querySelector('.signin')
+
+let isLogin = false
 
 userIcon.addEventListener('click', () => {
     if (!modal || !close || !cancelbtn) {
@@ -33,5 +35,9 @@ function onClose() {
     modal.style.display = 'none'
 }
 
-signUp(form)
+close.onclick = () => {return console.log(isLogin = !isLogin)}
+
+
+isLogin ? signIn(signInForm) : signUp(signUpForm)
 signIn(signInForm)
+signUp(signUpForm)

@@ -10,7 +10,7 @@ export function signIn(logInForm) {
         auth.signInWithEmailAndPassword(email, password)
         .then(() => {
             location = './pages/profile/provider/info'
-        }).catch(error => console.log(error()))
+        }).catch(error => console.log(error))
     })
 }
 
