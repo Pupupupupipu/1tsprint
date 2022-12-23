@@ -61,9 +61,13 @@
     .product {
         &-item {
             text-align: center;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
         }
         &-image {
             position: relative;
+            max-height: 312px;
             font-family: 'Font Awesome 6 Free';
             &::before {
                 position: absolute;
@@ -79,6 +83,10 @@
                 align-items: center;
                 font-family: Raleway;
                 font-size: 15px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
             }
             &.favorites {
                 &::after {
@@ -99,8 +107,9 @@
         }
         &-footer {
             display: flex;
-            margin-top: 15px;
+            margin-top: auto;
             justify-content: space-between;
+            padding: 15px 0;
         }
         &-edit {
             width: 24px;

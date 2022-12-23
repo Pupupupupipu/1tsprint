@@ -5,34 +5,14 @@
   justify-content: space-between;
   gap: 20px;
 }
-.content-list .product-item {
-  text-align: center;
-}
-.content-list .product-image {
-  position: relative;
-}
-.content-list .product-image::before {
-  position: absolute;
-  content: "HIT";
-  width: 60px;
-  height: 30px;
-  border-radius: 20px;
-  background-color: #E3E9C2;
-  display: flex;
-  top: 10px;
-  left: 10px;
-  justify-content: center;
-  align-items: center;
-  font-family: Raleway;
-  font-size: 15px;
-}
 .content-list .product-name {
   margin: 5px 0;
 }
 .content-list .product-footer {
   display: flex;
-  margin-top: 15px;
+  margin-top: auto;
   justify-content: space-between;
+  padding: 15px 0;
 }
 .content-list .product-edit {
   width: 24px;

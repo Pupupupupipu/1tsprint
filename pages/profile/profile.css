@@ -58,9 +58,13 @@
 }
 .content-list .product-item {
   text-align: center;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 .content-list .product-image {
   position: relative;
+  max-height: 312px;
   font-family: "Font Awesome 6 Free";
 }
 .content-list .product-image::before {
@@ -78,6 +82,10 @@
   font-family: Raleway;
   font-size: 15px;
 }
+.content-list .product-image img {
+  width: 100%;
+  height: 100%;
+}
 .content-list .product-image.favorites::after {
   display: flex;
   position: absolute;
@@ -93,8 +101,9 @@
 }
 .content-list .product-footer {
   display: flex;
-  margin-top: 15px;
+  margin-top: auto;
   justify-content: space-between;
+  padding: 15px 0;
 }
 .content-list .product-edit {
   width: 24px;

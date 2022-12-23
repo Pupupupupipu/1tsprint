@@ -21,6 +21,8 @@ auth.onAuthStateChanged(user => {
           userData['city'].value = recieveData.city?.stringValue || '',
           userData['address'].value = recieveData.address?.stringValue || '',
           userData['passportID'].value = recieveData.passportID?.stringValue || ''
+
+          // userData['photoURL'].value = recieveData.photoURL?.stringValue || ''
         }
       })
       .catch(error => {
@@ -41,7 +43,7 @@ auth.onAuthStateChanged(user => {
         address: userData['address'].value.trim(),
         passportID: userData['passportID'].value.trim(),
 
-        photoURL: userData['photoURL'].value
+        // photoURL: userData['photoURL'].value
       }, { merge: true }).then(() => {
         console.log('success');
         // Update successful
