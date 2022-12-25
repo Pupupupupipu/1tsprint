@@ -4,6 +4,7 @@ import 'https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js'
 import "https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"
 import "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"
 import "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"
+import { getStorage, ref as storageRef } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js";
 import 'https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js'
 
 
@@ -23,3 +24,5 @@ firebase.initializeApp(firebaseConfig)
 export const auth = firebase.auth()
 export const db = firebase.firestore()
 export const endpoint = `https://firestore.googleapis.com/v1/projects/anongifts-44d60/databases/(default)/documents/`//${collection}/${document}
+// export const storage = getStorage('images')
+// export const ref = storageRef()
