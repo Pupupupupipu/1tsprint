@@ -63,15 +63,15 @@
                 <h2 class="text-center pt-5 pb-3">Lorem, ipsum.</h2>
                 <div class="swiper main-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=10" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=11" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=12" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=13" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=14" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=15" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=16" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=16" alt=""></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=217" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=10" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=11" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=12" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=13" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=14" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=15" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=16" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=16" loading="lazy" alt=""></div>
+                        <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=217" loading="lazy" alt=""></div>
                     </div>
                     <div class="swiper-pagination d-none"></div>
                 </div>
@@ -80,15 +80,15 @@
         <h2 class="text-center pt-5 pb-3">Акции</h2>
         <div class="pb-5 swiper stock-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=1" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=2" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=3" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=4" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=5" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=6" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=7" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=8" alt=""></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=9" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=1" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=2" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=3" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=4" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=5" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=6" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=7" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=8" loading="lazy" alt=""></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/400/500?a=9" loading="lazy" alt=""></div>
             </div>
             <div class="swiper-pagination d-none"></div>
         </div>
@@ -136,48 +136,53 @@
         </div>
     </footer>
     <div class="modal">
-        <form class="modal-content animate" action="#">
-        <span class="close" title="Close Modal">×</span>
-        <div class="container">
-            <h3 class='text-center'>Вход/Регистрация</h3>
-            <input type="text" placeholder="Имя" name="name" required>
-            <input type="email" placeholder="Почта" name="email" required>
-            <label id="password">
-            <input type="password" placeholder="Пароль" name="password" required>
-            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
-            </label>
-            <button type="submit">Зарегистрироваться</button>
-            <label>
-            <input type="checkbox" checked="checked" name="remember"> Запомнить
-            </label>
+        <div class="container" id="container">
+            <span class="close" title="Close Modal">×</span>
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h2>Регистрация</h2>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>или исспользуйте вашу почту для регистрации</span>
+                    <input type="text" name="name" placeholder="Имя" />
+                    <input type="email" name="email" placeholder="Почта" />
+                    <input type="password" name="password" placeholder="Пароль" />
+                    <button>Зарегистрироваться</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h2>Вход</h2>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>или исспользуйте ваш аккаунт</span>
+                    <input type="email" name="email" placeholder="Почта" />
+                    <input type="password" name="password" placeholder="Пароль" />
+                    <a class="password-reset" href="#">Забыли пароль?</a>
+                    <button>Войти</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h2>С возвращением!</h2>
+                        <p>Войдите чтобы увидеть новые предложения</p>
+                        <button class="ghost" id="signIn">Войти</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h2>Добро пожаловать!</h2>
+                        <p>Присоединитесь к нам и получите доступ к акциям и скидкам</p>
+                        <button class="ghost" id="signUp">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-        </form>
-        <form class="modal-content animate signin" action="#">
-        <span class="close" title="Close Modal">×</span>
-        <div class="container">
-            <h3 class='text-center'><span class="logUp">Вход</span>/<span class="logIn">Регистрация</span></h3>
-            <!-- <input type="text" placeholder="Имя" name="name" required> -->
-            <input type="email" placeholder="Почта" name="email" required>
-            <label id="password">
-            <input type="password" placeholder="Пароль" name="password" required>
-            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
-            </label>
-            <button type="submit">Войти</button>
-            <label>
-            <input type="checkbox" checked="checked" name="remember"> Запомнить
-            </label>
-        </div>
-    
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-        </form>
     </div>
 </body>
 </html>

@@ -85,6 +85,7 @@ header {
                 .btn {
                     color: #000;
                     border-color: transparent;
+                    z-index: 0;
                     &:hover {
                         color: #000;
                         background-color: transparent;

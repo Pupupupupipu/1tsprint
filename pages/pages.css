@@ -89,6 +89,7 @@ header .nav .nav-item__search-box .btn-check:focus + .btn, header .nav .nav-item
 header .nav .nav-item__search-box .btn {
   color: #000;
   border-color: transparent;
+  z-index: 0;
 }
 header .nav .nav-item__search-box .btn:hover {
   color: #000;

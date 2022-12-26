@@ -1,4 +1,4 @@
-import { signUp, signIn,} from '../user.js'
+import { signUp, signIn, resetPassword} from '../user.js'
 import styles from './styles.css' assert { type: "css" }
     document.adoptedStyleSheets = [styles];
 
@@ -6,18 +6,21 @@ import styles from './styles.css' assert { type: "css" }
 const userIcon = document.querySelector('.user')
 const modal = document.querySelector('.modal')
 const close = document.querySelector('.close')
-const cancelbtn = document.querySelector('.cancelbtn')
-const signUpForm = document.querySelector('.modal-content')
-const signInForm = document.querySelector('.signin')
+const signUpForm = document.querySelector('.sign-up-container form')
+const signInForm = document.querySelector('.sign-in-container form')
+const passwordReset = document.querySelector('.password-reset')
 
-let isLogin = false
+const signUpButton = document.getElementById('signUp')
+const signInButton = document.getElementById('signIn')
+const container = document.getElementById('container')
+
+signUpButton.addEventListener('click', () =>
+container.classList.add('right-panel-active'))
+
+signInButton.addEventListener('click', () =>
+container.classList.remove('right-panel-active'))
 
 userIcon.addEventListener('click', () => {
-    if (!modal || !close || !cancelbtn) {
-        modal = document.querySelector('.modal')
-        close = document.querySelector('.close')
-        cancelbtn = document.querySelector('.cancelbtn')
-    }
     modal.style.display = 'block'
     document.body.style.overflow = 'hidden'
 })
@@ -26,8 +29,8 @@ close.addEventListener('click', () => {
     onClose()
 })
 
-cancelbtn.addEventListener('click', () => {
-    onClose()
+passwordReset.addEventListener('click', () => {
+    resetPassword()
 })
 
 function onClose() {
@@ -35,9 +38,5 @@ function onClose() {
     modal.style.display = 'none'
 }
 
-close.onclick = () => {return console.log(isLogin = !isLogin)}
-
-
-isLogin ? signIn(signInForm) : signUp(signUpForm)
 signIn(signInForm)
 signUp(signUpForm)

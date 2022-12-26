@@ -8,9 +8,10 @@ export function signIn(logInForm) {
         const password = logInForm['password'].value
 
         auth.signInWithEmailAndPassword(email, password)
-        .then(() => {
-            location = './pages/profile/provider/info'
-        }).catch(error => console.log(error))
+            .then(() => {
+                logInForm.reset()
+                location = './pages/profile/provider/info'
+            }).catch((error) => alert('«Неверные логин или пароль»'))
     })
 }
 
@@ -25,22 +26,24 @@ export function signUp(logOnForm) {
             .then((cred) => {
                 return db.collection('users').doc(cred.user.uid).set({
                     email, password, name
-            }).then(() => {
-                console.log('success')
-                // logOnForm.reset()
-                signIn(logOnForm)
-                // location = './pages/profile/provider/info'
+                }).then(() => {
+                    console.log('success')
+                    auth.currentUser.sendEmailVerification()
+                        .then(() => {
+                            // Email verification sent!
+                            // ...
+                        });
+                })
+                    .catch((err) => {
+                        console.log(err.message)
+                    })
             })
-            .catch((err) => {
-                console.log(err.message)
-            })
-        })
     })
 }
 
 
 export const logOut = () => {
-    const answer = confirm('Are you sure you want to log out?')
+    const answer = confirm('Вы уверены что хотите выйти?')
     if (answer) {
         auth.signOut(auth).then(() => {
             location = '/'
@@ -48,6 +51,19 @@ export const logOut = () => {
             console.log(error, 'Что-то не так')
         });
     } else return null
-    
+
     //localStorage.removeItem('user')
+}
+
+export const resetPassword = () => {
+    const email = prompt('Для восстановления пароля введите ваш Email')
+    if (email) {
+    auth.sendPasswordResetEmail(email)
+        .then(() => {
+            alert('Письмо для сброса пароля отправлено.')
+            //Password reset email sent!
+        }).catch((error) => {
+            alert('Пользователь с указанной почтой не найден')
+        })
+    }
 }

@@ -12,7 +12,6 @@ auth.onAuthStateChanged(user => {
       .then(response => {
         const recieveData = response.data.fields
         if (recieveData) {  
-          console.log(recieveData.photoURL);
           userData['name'].value = recieveData.name?.stringValue || '',
           userData['lastname'].value = recieveData.lastname?.stringValue || '',
           userData['surname'].value = recieveData.surname?.stringValue || '',
@@ -54,13 +53,13 @@ auth.onAuthStateChanged(user => {
         // ...
       })
       console.log(firebase,'conf');
-      userData['photoURL'].addEventListener('change', function(evt) {
-        let firstFile = evt.target.files[0] // upload the first file only
-        let locationRef = storage.ref('images/' + firstFile.name)
-        location.put(file)
-        console.log('sended');
+      // userData['photoURL'].addEventListener('change', function(evt) {
+      //   let firstFile = evt.target.files[0] // upload the first file only
+      //   let locationRef = storage.ref('images/' + firstFile.name)
+      //   location.put(file)
+      //   console.log('sended');
         // let uploadTask = storageRef.put(firstFile)
-    })
+    // })
       // storageRef.put(file).then((snapshot) => {
       //   console.log('Uploaded a blob or file!');
       // });
@@ -68,14 +67,13 @@ auth.onAuthStateChanged(user => {
     })
 
     passwordChange.onclick = () => {
-      // const confirm = confirm('Are you sure, you want to change your password?', false) // Need to fix
-      if (confirm) {
-        const newPassword = prompt('Enter your new password: ').trim();
+      if (confirm('Вы уверены что хотите изменить ваш пароль?') === true) {
+        const newPassword = prompt('Введите новый пароль: ').trim();
         if (newPassword) {
           db.collection('users').doc(user.uid).set({
             password: newPassword,
           }, { merge: true }).then(() => {
-            alert('Password changed! Your new password will be ' + newPassword)
+            alert('Пароль изменен! Ваш новый пароль: ' + newPassword)
             // Update successful
             // ...
           }).catch((error) => {
@@ -90,11 +88,17 @@ auth.onAuthStateChanged(user => {
     }
 
     removeUser.onclick = () => {
-      // const confirm = confirm(`Are you sure you want to remove your account?`, false)
-      if (confirm) {
+      if (confirm(`Вы уверены что хотите удалить ваш аккаунт?`) === true) {
         db.collection('users').doc(user.uid).delete()
           .then(() => {
-            alert("Accaunt successfully deleted!")
+            const user = auth.currentUser
+            user.delete().then(() => {
+              // User deleted from auth.
+            }).catch((error) => {
+              // An error ocurred
+              // ...
+            });
+            alert("Аккаунт успешно удален!")
             auth.signOut(auth)
             location = ('/')
           }).catch((error) => {
