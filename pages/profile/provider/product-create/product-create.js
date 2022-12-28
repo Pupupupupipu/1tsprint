@@ -23,7 +23,7 @@ if (createProductForm) {
                     count: createProductForm['count'].value.trim(),
                     price: createProductForm['price'].value.trim(),
                     // photo: createProductForm['photo'].files[0].name,
-                    photo: `https://picsum.photos/400/500?a=${createProductForm['product-label'].value}`
+                    photo: `https://picsum.photos/290/310?a=${createProductForm['product-label'].value}`
                     //video
                 }).then(async (prod) => {
                     productIds.push(prod.id);

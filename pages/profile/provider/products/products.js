@@ -3,21 +3,13 @@ import { auth, db, endpoint } from '../../../../firebase.js'
 
 const productBox = document.querySelector('.content-list')
 
-axios.get(endpoint + 'products/')
-    .then(async response => {
-        const recieveProductData = response.data.documents
-        await recieveProductData.forEach(prodId => {
-
-        })
-    })
-
-const cardTamplate = (image, title, price, rating) => { return `
+const cardTamplate = (photo, title, price, count) => { return `
 <div class='product-item'>
-<div class='product-image'><img src="${image}" loading='lazy' /></div>
+<div class='product-image'><img src="${photo}" loading='lazy' /></div>
 <div class="product-name">${title}</div>
 <div class="product-price">${price} р.</div>
 <div class="product-footer">
-    <p class="ptoduct-count">осталось ${rating.count} шт.</p>
+    <p class="ptoduct-count">осталось ${count} шт.</p>
     <div class="product-actions">
         <button class="product-edit"></button>
         <button class="product-delete"></button>
@@ -28,34 +20,35 @@ const cardTamplate = (image, title, price, rating) => { return `
 document.addEventListener('DOMContentLoaded', async () => {
     auth.onAuthStateChanged(async user => {
         if (user) {
-            const userCart = await fetchCart()
-            // if (userCart) {
-            //     console.log(userCart);
-            // }
+            const userCart = await fetchProdByUser(user)
+
         }
     })
 })
 
-async function fetchCart() {
-    await fetch('https://fakestoreapi.com/carts/user/2')
-        .then((res) => { return res.json()})
-        .then((data) => {
-           data[0].products.forEach(prod => {
-                fetchProduct(`https://fakestoreapi.com/products/${prod.productId}`)
-           })
+async function fetchProdByUser(user) {
+    await axios.get(endpoint + 'users/' + user.uid)
+    .then(async response => {
+        const recieveData = response.data.fields
+        await recieveData.product.arrayValue.values.forEach(prodId => {
+            if (prodId) {
+                fetchProduct(prodId)
+            }
         })
+    })
 }
 
-async function fetchProduct(prodUrl) {
-    await fetch(prodUrl)
-        .then(prodRes => {return prodRes.json()})
-        .then(prod => displayProducts(prod))
+async function fetchProduct(prodId) {
+    axios.get(endpoint + 'products/' + prodId.stringValue)
+    .then(async response => {
+        const recieveProductData = response.data
+            displayProduct(recieveProductData)
+    })
 }
 
-function displayProducts(product) {
-    const {image, title, price, rating} = product
-    productBox.insertAdjacentHTML('beforeend', cardTamplate(image, title, price, rating))
+function displayProduct(product) {
+    console.log(product);
+    const {photo, name, price, count} = product.fields
+    productBox.insertAdjacentHTML('beforeend', cardTamplate(photo.stringValue, name.stringValue,
+         price.stringValue, count.stringValue))
 }
-// function displayProduct(cart) {
-//     cart.map
-// }
