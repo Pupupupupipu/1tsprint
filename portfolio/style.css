@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family:gothic;
+}
+
+/* header */
+
+.center{
+    display: flex;
+    align-items: center;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.header-text{
+    margin-left: 50px;
+}
+
+header{
+    background-color: rgb(77, 58, 83);
+    color:rgb(217, 233, 248);
+    padding: 12px; 
+}
+
+.header-img{
+    border-radius: 100%;
+    height: 250px;
+    width: 250px;
+    padding-bottom: 20px;
+}
+
+/* main */
+
+main{
+    background-color: rgb(229, 236, 241);
+    padding-left: 10px;
+}
+
+/* Objective */
+
+.Objective-title{
+    padding: 40px 30px 10px;
+}
+
+.Objective-text{
+    padding: 10px 30px;
+}
+
+/* Experience */
+
+.Experience-main-title{
+    padding: 40px 30px 20px;
+}
+
+.Experience-years{
+    width: 200px;
+    padding-right: 100px;
+}
+
+.Experience-title{
+    font-size: 16px;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+.Experience-main-text{
+    display: flex;
+    justify-content:flex-start;
+    width: 80%;
+    padding-left: 30px;
+}
+
+.Experience-text{
+    padding-left: 330px;
+}
+
+/* Skills */
+
+.Skills-title{
+    padding: 40px 30px 10px;
+}
+
+.Skills-text{
+    padding: 10px 30px;
+}
+
+/* Language */
+
+.Language-title{
+    padding: 40px 30px 10px;
+}
+
+.Language-list{
+    padding: 10px 30px;
+    list-style-type: square;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+ .Objective, .Experience, .Skills, .Language, .contact-form, footer{
+    margin: 0 calc(50% - 1170px / 2);
+} 
+
+/* form */
+
+.contact-form{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(253, 236, 200);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+legend{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px 0px 10px;
+}
+
+.form-item-title{
+    font-weight: normal;
+    padding: 10px 0px;
+}
+
+textarea{
+    width: 700px;
+    height: 30px;
+    border-width: 0;
+    border-color: rgb(253, 236, 200);
+    background-color: rgb(253, 236, 200);
+    outline: none;
+    border-bottom: rgb(240, 213, 157) 2px solid;
+}
+
+input{
+    width: 350px;
+    height: 30px;
+    border-width: 0;
+    border-color: rgb(253, 236, 200);
+    background-color: rgb(253, 236, 200);
+    outline: none;
+    border-bottom: rgb(240, 213, 157) 2px solid;
+}
+
+button{
+    height: 50px;
+    width: 200px;
+    background-color: rgb(77, 58, 83);
+    color:#fff;
+    margin: 30px 0px;
+}
+
+footer{
+    background-color: rgb(77, 58, 83);
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contacts-title{
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.contacts{
+    list-style-type: none;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.rights{
+    color:rgb(221, 209, 209);
+    text-align: center;
+    padding: 30px 0px;
+}
