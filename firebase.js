@@ -4,7 +4,7 @@ import 'https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js'
 import "https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"
 import "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"
 import "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"
-import { getStorage, ref as storageRef } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js";
+import "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js";
 import 'https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js'
 
 

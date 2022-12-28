@@ -21,8 +21,10 @@ signInButton.addEventListener('click', () =>
 container.classList.remove('right-panel-active'))
 
 userIcon.addEventListener('click', () => {
-    modal.style.display = 'block'
-    document.body.style.overflow = 'hidden'
+    if (!userIcon.href) {
+        modal.style.display = 'block'
+        document.body.style.overflow = 'hidden'
+    }
 })
 
 close.addEventListener('click', () => {

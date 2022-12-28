@@ -23,7 +23,7 @@ auth.onAuthStateChanged(user => {
           userData['address'].value = recieveData.address?.stringValue || '',
           userData['passportID'].value = recieveData.passportID?.stringValue || ''
 
-           userData['passportPhoto'].src = recieveData.photoURL?.stringValue || ''
+          userData['passportPhoto'].src = recieveData.photoURL?.stringValue || ''
         }
       })
       .catch(error => {
@@ -32,6 +32,7 @@ auth.onAuthStateChanged(user => {
 
 
     userData.addEventListener('change', () => {
+      console.log(userData['photoURL'].files[0].name)
       db.collection('users').doc(user.uid).set({
         name: userData['name'].value.trim(),
         lastname: userData['lastname'].value.trim(),
@@ -42,7 +43,9 @@ auth.onAuthStateChanged(user => {
         phone: userData['phone'].value.trim(),
         city: userData['city'].value.trim(),
         address: userData['address'].value.trim(),
-        passportID: userData['passportID'].value.trim()
+        passportID: userData['passportID'].value.trim(),
+        photoURL: userData['photoURL'].files[0]
+        
       }, { merge: true }).then(() => {
         console.log('success');
         // Update successful
@@ -52,7 +55,7 @@ auth.onAuthStateChanged(user => {
         // An error occurred
         // ...
       })
-      console.log(firebase,'conf');
+      console.log(firebase.storage().ref(),'conf');
       // userData['photoURL'].addEventListener('change', function(evt) {
       //   let firstFile = evt.target.files[0] // upload the first file only
       //   let locationRef = storage.ref('images/' + firstFile.name)
