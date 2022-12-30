@@ -1,8 +1,14 @@
 * {
     font-family: Raleway;
 }
+html {
+    height: 100%;
+}
 body {
-    background: linear-gradient(to top, #e5c9c5, #feebc0) //ffcab8; //#fffedf; //#B7BC9A;
+    background: linear-gradient(to top, #e5c9c5, #feebc0); //ffcab8; //#fffedf; //#B7BC9A;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 * {
     font-family: Raleway;
@@ -14,6 +20,7 @@ a {
     display: none;
 }
 header {
+    flex: 0 0 auto;
     .form-control:focus {
         box-shadow: none;
     }
@@ -108,6 +115,9 @@ header {
         }
     } 
 }
+main {
+  flex: 1 0 auto;  
+}
 .white-block {
     display: flex;
     margin: 0 auto 50px;
@@ -125,6 +135,7 @@ header {
     }
 }
 footer {
+    flex: 0 0 auto;
     .short-links {
         display: flex;
         justify-content: space-between;

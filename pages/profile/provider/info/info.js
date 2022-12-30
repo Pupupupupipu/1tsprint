@@ -1,37 +1,33 @@
 import '../../../pages.js'
-import { auth, db, endpoint } from '../../../../firebase.js'
+import 'https://unpkg.com/imask'
+import { auth, db, endpoint, storageRef } from '../../../../firebase.js'
 
 const userData = document.querySelector('.info-form')
 const passwordChange = document.querySelector('.info-form_password-change')
 const removeUser = document.querySelector('.info-form_account-remove')
-const passportPhoto = document.querySelector('.info-passport')
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    axios.get(endpoint + 'users/' + user.uid)
-      .then(response => {
-        const recieveData = response.data.fields
+    db.collection('users').doc(user.uid).onSnapshot(doc => { 
+        const recieveData = doc.data()
         if (recieveData) {  
-          userData['name'].value = recieveData.name?.stringValue || '',
-          userData['lastname'].value = recieveData.lastname?.stringValue || '',
-          userData['surname'].value = recieveData.surname?.stringValue || '',
-          userData['gender'].value = recieveData.gender?.stringValue || '',
-          userData['birthdate'].value = recieveData.birthdate?.stringValue || '',
-          userData['email'].value = recieveData.email?.stringValue || '',
-          userData['phone'].value = recieveData.phone?.stringValue || '',
-          userData['city'].value = recieveData.city?.stringValue || '',
-          userData['address'].value = recieveData.address?.stringValue || '',
-          userData['passportID'].value = recieveData.passportID?.stringValue || ''
+          userData['name'].value = recieveData.name || '',
+          userData['lastname'].value = recieveData.lastname || '',
+          userData['surname'].value = recieveData.surname || '',
+          userData['gender'].value = recieveData.gender || '',
+          userData['birthdate'].value = recieveData.birthdate || '',
+          userData['email'].value = recieveData.email || '',
+          userData['phone'].value = recieveData.phone || '',
+          userData['city'].value = recieveData.city || '',
+          userData['address'].value = recieveData.address || '',
+          userData['passportID'].value = recieveData.passportID || ''
 
-          // userData['passportPhoto'].src = recieveData.photoURL?.stringValue || ''
+          userData['passportPhoto'].src = recieveData.photoURL || ''
         }
       })
-      .catch(error => {
-        console.log(error);
-      })
 
 
-    userData.addEventListener('change', () => {
+    userData.addEventListener('input', () => {
       db.collection('users').doc(user.uid).set({
         name: userData['name'].value.trim(),
         lastname: userData['lastname'].value.trim(),
@@ -42,9 +38,7 @@ auth.onAuthStateChanged(user => {
         phone: userData['phone'].value.trim(),
         city: userData['city'].value.trim(),
         address: userData['address'].value.trim(),
-        passportID: userData['passportID'].value.trim(),
-        // photoURL: userData['photoURL'].files[0]
-        
+        passportID: userData['passportID'].value.trim()
       }, { merge: true }).then(() => {
         console.log('success');
         // Update successful
@@ -54,18 +48,20 @@ auth.onAuthStateChanged(user => {
         // An error occurred
         // ...
       })
-      //console.log(firebase.storage().ref(),'conf');
-      // userData['photoURL'].addEventListener('change', function(evt) {
-      //   let firstFile = evt.target.files[0] // upload the first file only
-      //   let locationRef = storage.ref('images/' + firstFile.name)
-      //   location.put(file)
-      //   console.log('sended');
-        // let uploadTask = storageRef.put(firstFile)
-    // })
-      // storageRef.put(file).then((snapshot) => {
-      //   console.log('Uploaded a blob or file!');
-      // });
-      // photoURL: userData['photoURL'].value
+
+
+      userData['photoURL'].addEventListener('change', function(evt) {
+        const file = evt.target.files[0] // upload the first file only
+        const thisRef = storageRef.child(file.name)
+        thisRef.put(file).then( res => {
+          storageRef.child(file.name).getDownloadURL().then(url => {
+            db.collection('users').doc(user.uid).set({
+              photoURL: url
+            })
+          }).catch(e => console.log('Get link error' + e))
+          console.log('Загрузка завершена!');
+        }).catch(e => console.log('Error' + e))
+      })
     })
 
     passwordChange.onclick = () => {
@@ -113,3 +109,12 @@ auth.onAuthStateChanged(user => {
     location = '/'
   }
 })
+
+//--------------------------Masks--------------------------------------
+
+let phoneMask = IMask(userData['phone'], {
+  mask: '+{7}(000)000-00-00',
+  lazy: false
+})
+phoneMask.updateValue()
+

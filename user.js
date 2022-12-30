@@ -11,7 +11,9 @@ export function signIn(logInForm) {
             .then(() => {
                 logInForm.reset()
                 location = './pages/profile/provider/info'
-            }).catch((error) => alert('«Неверные логин или пароль»'))
+            }).catch((error) => {
+                alert('«Неверные логин или пароль»')
+            })
     })
 }
 
@@ -21,7 +23,6 @@ export function signUp(logOnForm) {
         const name = logOnForm['name'].value.trim()
         const email = logOnForm['email'].value.trim()
         const password = logOnForm['password'].value.trim()
-        console.log(email);
         auth.createUserWithEmailAndPassword(email, password)
             .then((cred) => {
                 return db.collection('users').doc(cred.user.uid).set({

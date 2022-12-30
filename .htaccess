@@ -1,0 +1,9 @@
+RewriteEngine On
+#401 Авторизация не выполнена
+ErrorDocument 401 http://anongifts.nik96bbj.beget.tech/errors/401
+#403 Доступ запрещен
+ErrorDocument 403 http://anongifts.nik96bbj.beget.tech/errors/403
+#404 Страница не найдена
+ErrorDocument 404 http://anongifts.nik96bbj.beget.tech/errors/404
+#500 Внутренняя ошибка сервера
+ErrorDocument 500 http://anongifts.nik96bbj.beget.tech/errors/500

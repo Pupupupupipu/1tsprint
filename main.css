@@ -7,10 +7,6 @@
   max-width: 950px;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
 .swiper-slide {
   height: 370px;
   text-align: center;
