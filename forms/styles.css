@@ -109,6 +109,16 @@
 .modal .form-container form input:invalid {
   box-shadow: 0 0 0 0.15rem red !important;
 }
+.modal .form-container form .has-validation {
+  width: 100%;
+  position: relative;
+}
+.modal .form-container form .has-validation #togglePassword {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 25px;
+}
 .modal .form-container.sign-in-container {
   left: 0;
   width: 50%;

@@ -10,9 +10,10 @@ const signUpForm = document.querySelector('.sign-up-container form')
 const signInForm = document.querySelector('.sign-in-container form')
 const passwordReset = document.querySelector('.password-reset')
 
-const signUpButton = document.getElementById('signUp')
-const signInButton = document.getElementById('signIn')
-const container = document.getElementById('container')
+const togglePassword = document.querySelectorAll('#togglePassword')
+const signUpButton = document.querySelector('#signUp')
+const signInButton = document.querySelector('#signIn')
+const container = document.querySelector('#container')
 
 signUpButton.addEventListener('click', () =>
 container.classList.add('right-panel-active'))
@@ -40,23 +41,41 @@ function onClose() {
     modal.style.display = 'none'
 }
 
+togglePassword.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        console.dir(toggle,'hjn');
+        showPassword(toggle, toggle.previousElementSibling)
+    })    
+});
 
 
-    // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
-    var forms = document.querySelectorAll('.needs-validation')
+function showPassword (toggle, password) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password'
+    password.setAttribute('type', type)
+    // toggle icon
+    toggle.classList.toggle('fa-eye')
+    toggle.classList.toggle('fa-eye-slash')
+}
+
+
+    // // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
+    // var forms = document.querySelectorAll('.needs-validation')
   
-    // Зацикливайтесь на них и предотвращайте отправку
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('input', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
+    // // Зацикливайтесь на них и предотвращайте отправку
+    // Array.prototype.slice.call(forms)
+    //   .forEach(function (form) {
+    //     form.addEventListener('input', function (event) {
+    //       if (!form.checkValidity()) {
+    //         event.preventDefault()
+    //         event.stopPropagation()
+    //       }
   
-          form.classList.add('was-validated')
-        }, false)
-      })
+    //       form.classList.add('was-validated')
+    //     }, false)
+    //   })
+
+
 
 signIn(signInForm)
 signUp(signUpForm)

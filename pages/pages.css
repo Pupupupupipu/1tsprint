@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to top, #e5c9c5, #feebc0);
+  background: #CFD8FF;
   display: flex;
   flex-direction: column;
   height: 100%;

@@ -116,6 +116,16 @@
                     box-shadow: 0 0 0 0.15rem red !important;
                 }
             }
+            .has-validation {
+                width: 100%;
+                position: relative;
+                #togglePassword {
+                    position: absolute;
+                    cursor: pointer;
+                    right: 10px;
+                    top: 25px;
+                }
+            }
         }
             
         &.sign-in-container {

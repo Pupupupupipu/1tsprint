@@ -39,6 +39,9 @@ export function signUp(logOnForm) {
                         console.log(err.message)
                     })
             })
+            .catch((err) => {
+                console.log(err.message)
+            })
     })
 }
 

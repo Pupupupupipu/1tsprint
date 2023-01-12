@@ -23,9 +23,19 @@
             }
             &_password-change {
                 color: #000;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: lighten(#000, 50%);
+                }
             }
             &_account-remove{
-                color: #000;
+                color: #BB342F;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #ff0800;
+                }
             }
             &_box {
                 margin: 0;
@@ -58,7 +68,7 @@
                 border-bottom: 1px solid #000; 
                 background-color: transparent; 
                 outline: none;
-                transition: 0.3s;;
+                transition: 0.3s;
             }
             &_upload{
                 display: flex;

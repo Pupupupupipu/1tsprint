@@ -34,7 +34,7 @@ auth.onAuthStateChanged(user => {
         surname: userData['surname'].value.trim(),
         gender: userData['gender'].value.trim(),
         birthdate: userData['birthdate'].value.trim(),
-        email: userData['email'].value.trim(),
+        //email: userData['email'].value.trim(),
         phone: userData['phone'].value.trim(),
         city: userData['city'].value.trim(),
         address: userData['address'].value.trim(),
