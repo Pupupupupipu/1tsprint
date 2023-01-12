@@ -58,25 +58,6 @@ function showPassword (toggle, password) {
     toggle.classList.toggle('fa-eye-slash')
 }
 
-
-    // // Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
-    // var forms = document.querySelectorAll('.needs-validation')
-  
-    // // Зацикливайтесь на них и предотвращайте отправку
-    // Array.prototype.slice.call(forms)
-    //   .forEach(function (form) {
-    //     form.addEventListener('input', function (event) {
-    //       if (!form.checkValidity()) {
-    //         event.preventDefault()
-    //         event.stopPropagation()
-    //       }
-  
-    //       form.classList.add('was-validated')
-    //     }, false)
-    //   })
-
-
-
 signIn(signInForm)
 signUp(signUpForm)
 

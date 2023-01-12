@@ -1,9 +1,22 @@
-.main_first {
-    width: 100%;
-    background-color: #ffcab8; //#feebc0; //#D9D9D9;
-}
-.main-swiper {
-    max-width: 950px;
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+.main_content {
+    &-logo {
+        background-image: url(./icons/logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        padding: 11.5rem 0 ;
+    }
+    &-title {
+        font-family: 'Allison', cursive;
+        font-size: 8rem;
+    }
+    .content_title {
+        &-text {
+            font-size: 1.5rem;
+        }
+    }
 }
 .swiper {
     &-slide {

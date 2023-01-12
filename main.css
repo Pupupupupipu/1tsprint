@@ -1,10 +1,17 @@
-.main_first {
-  width: 100%;
-  background-color: #ffcab8;
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+.main_content-logo {
+  background-image: url(./icons/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 11.5rem 0;
 }
-
-.main-swiper {
-  max-width: 950px;
+.main_content-title {
+  font-family: "Allison", cursive;
+  font-size: 8rem;
+}
+.main_content .content_title-text {
+  font-size: 1.5rem;
 }
 
 .swiper-slide {
