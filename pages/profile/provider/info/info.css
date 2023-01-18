@@ -69,6 +69,12 @@
   margin-top: 23px;
   margin-bottom: 30px;
 }
+.user-wrapper .info-form_upload label {
+  cursor: pointer;
+}
+.user-wrapper .info-form_upload input {
+  display: none;
+}
 .user-wrapper .info-form_text {
   display: block;
   font-family: Raleway;
@@ -77,12 +83,17 @@
 }
 .user-wrapper .info-form_btn {
   display: flex;
-  color: #000;
-  font-weight: 400;
   padding: 1% 10%;
+  color: #000;
+  cursor: pointer;
+  font-weight: 400;
   border: 1px solid #bb343f;
   border-radius: 20px;
   transition: 0.2s;
+}
+.user-wrapper .info-form_btn:hover {
+  background-color: #bb343f;
+  color: #fff;
 }
 .user-wrapper .info-gender {
   display: flex;

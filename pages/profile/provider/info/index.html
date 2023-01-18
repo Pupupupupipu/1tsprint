@@ -23,7 +23,7 @@
                     <a href="/" class="nav__item nav-item__logo">логотип</a>
                     <div class="nav__item nav-item__city"></div>
                 </div>
-                <div class="nav__block">
+                <div class="nav__block nav-block__center">
                     <div class="nav__item nav-item__links">
                         <div class="nav-item__link">Каталог</div>
                         <div class="nav-item__link">Условия</div>
@@ -135,16 +135,16 @@
                                         <input class="info-form_input" placeholder="Серия и номер паспорта" type="number" name="passportID" id="passportID">
                                     </li>   
                                     <li class="info-form_item">
-                                        <p class="info-form_label">Приложить фото паспорта</p>
+                                        <p class="info-form_label">Приложить фото паспорта:</p>
                                     </li>                                 
                             </ul>                          
                                 
 
                                 <div class="info-form_upload">
                                     <img class="info-passport" name="passportPhoto" alt="Passport photo" loading="lazy"/>
-                                    <button class="info-form_btn">Загрузить</button>
-                                    <input type="file" name="photoURL">                                               
-                                                                 
+                                    <input id="file" type="file" name="photoURL">      
+                                    <button type="button"onclick="file.click()" class="info-form_btn">Загрузить</button>
+                                                                                                   
                                 </div>
                                 <div class="info-form_edit">
                                     <a class="info-form_password-change">Изменить пароль</a>

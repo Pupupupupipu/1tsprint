@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import url(../pages/pages.css);
+@import url(../pages/profile/profile.css);
+.main__content-count {
+  display: flex;
+  justify-content: right;
+  font-size: 14px;
+}
+.main__content-filters {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  margin: 1rem 0;
+  padding: 0.7rem 0;
+  gap: 15px;
+}
+.main__content-filters .dropdown-toggle {
+  color: #000;
+}
+.main__content-filters .dropdown-toggle::after {
+  display: none;
+}
+.main__content-filters .dropdown-menu {
+  min-width: 13em;
+}
+.main__content-filters .form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin: 0 1rem 0.1em;
+}
+
+.form_check input[type=checkbox] + label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}/*# sourceMappingURL=catalog.css.map */

@@ -1,5 +1,6 @@
 import '../../../pages.js'
 import { auth, db, endpoint } from '../../../../firebase.js'
+import 'https://unpkg.com/imask'
 
 const createProductForm = document.querySelector('.create-product-form')
 
@@ -43,3 +44,13 @@ if (createProductForm) {
         })
     })
 } else console.log('form not found');
+  
+
+let priceMask = IMask(createProductForm['price'], {
+    mask: Number,
+    scale: 2,
+    thousandsSeparator: ' ',
+    normalizeZeros: true,
+    padFractionalZeros: true,
+  });
+  priceMask.updateValue()

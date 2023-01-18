@@ -58,9 +58,13 @@
 }
 .content-list .product-item {
   text-align: center;
-  width: 30%;
+  width: 20%;
   display: flex;
+  color: #000;
   flex-direction: column;
+}
+.content-list .product-item:hover .product-buy, .content-list .product-item:focus .product-buy, .content-list .product-item:active .product-buy {
+  background-color: #b13642;
 }
 .content-list .product-image {
   position: relative;
@@ -124,8 +128,9 @@
   flex: 1 1;
   justify-content: center;
   padding: 5px 0;
-  background-color: #bb343f;
+  background-color: #9AAFB0;
   border-radius: 10px;
   border: none;
   color: white;
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=profile.css.map */

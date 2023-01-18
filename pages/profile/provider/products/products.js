@@ -7,7 +7,7 @@ const cardTamplate = (photo, title, price, count) => { return `
 <div class='product-item'>
 <div class='product-image'><img src="${photo}" loading='lazy' /></div>
 <div class="product-name">${title}</div>
-<div class="product-price">${price} р.</div>
+<div class="product-price">${price.replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ')} р.</div>
 <div class="product-footer">
     <p class="ptoduct-count">осталось ${count} шт.</p>
     <div class="product-actions">

@@ -8,18 +8,18 @@ html {
 }
 
 body {
-  background: #CFD8FF;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-* {
-  font-family: Raleway;
-}
-
 a {
   text-decoration: none;
+}
+
+.disabled-link {
+  pointer-events: none;
+  color: gray;
 }
 
 .hide {
@@ -40,6 +40,16 @@ header .nav .nav__item {
   margin: 15px auto;
   display: flex;
 }
+header .nav .nav__block.center-block {
+  flex: 0 1 30vw;
+}
+header .nav .nav-block__center {
+  flex: 0 1 30vw;
+  max-width: 560px;
+}
+header .nav .nav-item__logo img {
+  width: 130px;
+}
 header .nav .nav-item__city {
   display: none;
 }
@@ -55,9 +65,14 @@ header .nav .nav-item__city::before {
 header .nav .nav-item__link {
   color: #000;
 }
+header .nav .nav-item__link:hover, header .nav .nav-item__link:active, header .nav .nav-item__link:focus {
+  border-bottom: 1px solid #000;
+}
 header .nav .nav-item__links {
   display: flex;
   gap: 15px;
+  min-height: 25px;
+  justify-content: center;
 }
 header .nav .nav-item__social-link {
   height: 21px;
@@ -67,6 +82,7 @@ header .nav .nav-item__social-link {
 }
 header .nav .nav-item__social-link.user {
   background-image: url(../icons/user.svg);
+  cursor: pointer;
 }
 header .nav .nav-item__social-link.bag {
   background-image: url(../icons/bag.svg);
@@ -133,23 +149,18 @@ main {
   flex: 1 0 auto;
 }
 
-.white-block {
-  display: flex;
-  margin: 0 auto 50px;
-  border-radius: 20px;
-  max-width: 1380px;
-  background-color: #fff;
-}
-.white-block .breadcrumbs a {
+.breadcrumbs a {
   color: #000;
 }
-.white-block .breadcrumbs a.disabled {
+.breadcrumbs a.disabled {
   color: gray;
   pointer-events: none;
 }
 
 footer {
   flex: 0 0 auto;
+  background: #B7BC9A;
+  padding-top: 3%;
 }
 footer .short-links {
   display: flex;

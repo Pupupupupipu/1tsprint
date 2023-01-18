@@ -20,8 +20,14 @@
 .user-wrapper .info-form_password-change {
   color: #000;
 }
+.user-wrapper .info-form_password-change:hover, .user-wrapper .info-form_password-change:focus, .user-wrapper .info-form_password-change:active {
+  color: gray;
+}
 .user-wrapper .info-form_account-remove {
-  color: #000;
+  color: #BB342F;
+}
+.user-wrapper .info-form_account-remove:hover, .user-wrapper .info-form_account-remove:focus, .user-wrapper .info-form_account-remove:active {
+  color: #ff0800;
 }
 .user-wrapper .info-form_box {
   margin: 0;

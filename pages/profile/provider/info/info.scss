@@ -70,12 +70,18 @@
                 outline: none;
                 transition: 0.3s;
             }
-            &_upload{
+            &_upload {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin-top: 23px;
                 margin-bottom: 30px;
+                label {
+                    cursor: pointer;
+                }
+                input {
+                    display: none;
+                }
             }
             &_text {
                 display: block;
@@ -85,13 +91,18 @@
             }
             &_btn {
                 display: flex;
-                color: #000;
-                font-weight: 400;
                 padding: 1% 10%;
+                color: #000;
+                cursor: pointer;
+                font-weight: 400;
                 border: 1px solid #bb343f;
                 border-radius: 20px;
                 transition: 0.2s;
-                } 
+                &:hover {
+                    background-color: #bb343f;
+                    color: #fff;
+                }
+            } 
         }
         &-gender {
             display: flex;

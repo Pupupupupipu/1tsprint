@@ -61,9 +61,17 @@
     .product {
         &-item {
             text-align: center;
-            width: 30%;
+            width: 20%;
             display: flex;
+            color: #000;
             flex-direction: column;
+            &:hover,
+            &:focus, 
+            &:active {
+                .product-buy {
+                    background-color: #b13642;
+                }
+            }
         }
         &-image {
             position: relative;
@@ -130,10 +138,11 @@
             flex: 1 1;
             justify-content: center;
             padding: 5px 0;
-            background-color: #bb343f;
+            background-color: #9AAFB0;;
             border-radius: 10px;
             border: none;
             color: white;
+            transition: all .3s ease-in-out;
         }
     }
 }

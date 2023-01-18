@@ -27,7 +27,7 @@
                     <a href="/" class="nav__item nav-item__logo">логотип</a>
                     <div class="nav__item nav-item__city"></div>
                 </div>
-                <div class="nav__block">
+                <div class="nav__block nav-block__center">
                     <div class="nav__item nav-item__links">
                         <a href="/catalog" class="nav-item__link">Каталог</a>
                         <a href="/terms" class="nav-item__link">Условия</a>
@@ -35,9 +35,9 @@
                         <a href="/company" class="nav-item__link">О компании</a>
                     </div>
                     <div class="nav__item nav-item__search-box">
-                        <div class="">
+                        <div class="input-group">
                             <input class="form-control bg-transparent rounded-pill" type="search" id="example-search-input" placeholder="Поиск">
-                            <span class="-append">
+                            <span class="input-group-append">
                                 <button class="btn bg-transparent rounded-pill ms-n5" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
@@ -63,24 +63,132 @@
             <h1 class="text-center main_content-title">AnonGifts</h1>
             <h2 class="text-center main_content content_title-text">первый интернет-магазин, который умеет хранить тайны</h2>
         </section>
-        <div class="white-block">
-            <div class="container">
-                <section class="swiper stock-swiper pb-5">
-                    <h2 class="text-center pt-5 pb-3">Акции</h2>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=1" loading="lazy" alt="stock 1"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=2" loading="lazy" alt="stock 2"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=3" loading="lazy" alt="stock 3"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=4" loading="lazy" alt="stock 4"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=5" loading="lazy" alt="stock 5"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=6" loading="lazy" alt="stock 6"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=7" loading="lazy" alt="stock 7"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=8" loading="lazy" alt="stock 8"></div>
-                        <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=9" loading="lazy" alt="stock 8"></div>
+        <div class="container">
+            <section class="swiper stock-swiper pb-5">
+                <h2 class="text-center pt-5 pb-3">Акции</h2>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=1" loading="lazy" alt="stock 1">
+                        <div class="swiper-description">
+                            <div class="swiper-percent">Фантастическая распродажа  до -50%</div>
+                            <div class="swiper-dates">только с 1 февраля по 5 февраля</div>
+                        </div>
                     </div>
-                    <div class="swiper-pagination d-none"></div>
+                    <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=2" loading="lazy" alt="stock 2">
+                        <div class="swiper-description">
+                            <div class="swiper-percent">Фантастическая распродажа  до -50%</div>
+                            <div class="swiper-dates">только с 1 февраля по 5 февраля</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="https://picsum.photos/500/400?a=3" loading="lazy" alt="stock 3">
+                        <div class="swiper-description">
+                            <div class="swiper-percent">Фантастическая распродажа  до -50%</div>
+                            <div class="swiper-dates">только с 1 февраля по 5 февраля</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="swiper-pagination d-none"></div>
+                <div class="swiper-navigate">
+                    <div class="fa-solid fa-arrow-left"></div>
+                    <div class="fa-solid fa-arrow-right"></div>
+                </div>
+            </section>
+            <section class="novelties">
+                <h2 class="text-center pt-5 pb-3">Новинки</h2>
+                <div class="novelties-wrapper">
+                    <div class="novelties-item content-list">
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/novelties.svg" loading='lazy' /></div>
+                            <div class="product-name">Туалетная вода VERSACE</div>
+                            <div class="product-price">8 700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/novelties.svg" loading='lazy' /></div>
+                            <div class="product-name">Туалетная вода VERSACE</div>
+                            <div class="product-price">8 700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/novelties.svg" loading='lazy' /></div>
+                            <div class="product-name">Туалетная вода VERSACE</div>
+                            <div class="product-price">8 700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/novelties.svg" loading='lazy' /></div>
+                            <div class="product-name">Туалетная вода VERSACE</div>
+                            <div class="product-price">8 700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="show-all">показать еще</a>
+                </div>
+            </section>
+            <section class="popular">
+                <h2 class="text-center pt-5 pb-3">Популярные товары</h2>
+                <div class="popular-wrapper">
+                    <div class="popular-item content-list">
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/popular.svg" loading='lazy' /></div>
+                            <div class="product-name">Туалетная вода VERSACE</div>
+                            <div class="product-price">8 700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/popular.svg" loading='lazy' /></div>
+                            <div class="product-name">Сережки кольца</div>
+                            <div class="product-price">700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/popular.svg" loading='lazy' /></div>
+                            <div class="product-name">Сережки кольца</div>
+                            <div class="product-price">700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                        <div class='product-item'>
+                            <div class='product-image'><img src="./icons/popular.svg" loading='lazy' /></div>
+                            <div class="product-name">Сережки кольца</div>
+                            <div class="product-price">700 р.</div>
+                            <div class="product-footer">
+                                <button class="product-buy">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="show-all">показать еще</a>
+                </div>
+            </section>
+            <section class="swiper review-swiper pb-5">
+                <h2 class="text-center pt-5 pb-3">Отзывы</h2>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./icons/mainReview.svg" loading="lazy" alt="review 1">
+    
+                    </div>
+                    <div class="swiper-slide"><img src="./icons/mainReview.svg" loading="lazy" alt="review 2">
+
+                    </div>
+                    <div class="swiper-slide"><img src="./icons/mainReview.svg" loading="lazy" alt="review 3"></div>
+                </div>
+                <div class="swiper-pagination d-none"></div>
+                <div class="swiper-navigate">
+                    <div class="fa-solid fa-arrow-left"></div>
+                    <div class="fa-solid fa-arrow-right"></div>
+                </div>
+            </section>
         </div>
     </main>
     <footer>
@@ -136,7 +244,7 @@
                         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <span>или исспользуйте вашу почту для регистрации</span>
+                    <span>или используйте вашу почту для регистрации</span>
                     <div class="has-validation">
                         <input type="text" name="name" class="form-control" placeholder="Имя" />
                     </div>
@@ -166,7 +274,7 @@
                         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <span>или исспользуйте ваш аккаунт</span>
+                    <span>или используйте ваш аккаунт</span>
                     <div class="has-validation">
                         <input type="email" class="form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                          name="email" required placeholder="Почта" />

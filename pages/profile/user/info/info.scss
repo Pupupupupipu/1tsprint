@@ -22,9 +22,19 @@
             }
             &_password-change {
                 color: #000;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: lighten(#000, 50%);
+                }
             }
             &_account-remove{
-                color: #000;
+                color: #BB342F;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #ff0800;
+                }
             }
             &_box {
                 margin: 0;
