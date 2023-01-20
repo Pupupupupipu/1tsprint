@@ -1,0 +1,19 @@
+@import url(../../../profile/profile.css);
+.user-wrapper {
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+    .cart {
+        &-content {
+            margin: 1em auto;
+            width: 40%;
+            min-width: 374px;
+        }
+        &-title {
+            margin: 1.5em 0;
+        }
+       
+    }
+}
