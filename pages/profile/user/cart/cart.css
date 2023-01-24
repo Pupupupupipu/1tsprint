@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 .cart-container-top .link{
-  font-size: 20px;
+  font-size: inherit;
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -74,14 +74,14 @@
   font-size: 20px;
 }
 .product-tool-counter > button{
-  font-size: 20px;
+  font-size: inherit;
   background: rgb(0,0,0,0);
   padding: 0px 20px;
   border: solid 1px black;
   transition: .3s;
 }
 .product-tool-counter > button:active{
-  font-size: 20px;
+  font-size: inherit;
   background: rgb(37, 36, 36);
   color: white;
   padding: 0px 20px;
@@ -89,7 +89,7 @@
 }
 .product-color, .product-size, .product-code{
   display: flex;
-  font-size: 20px;
+  font-size: inherit;
 }
 .color{
   width: 20px;
